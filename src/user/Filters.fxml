@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="920.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.Filter_Controller">
+   <children>
+    <AnchorPane layoutY="133.0" minHeight="0.0" minWidth="0.0" prefHeight="786.0" prefWidth="764.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="133.0">
+         <children>
+            <TabPane layoutY="-68.0" prefHeight="700.0" prefWidth="764.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab fx:id="Tb_Expns" text="Personal Information">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="47.0" layoutY="37.0" prefHeight="197.0" prefWidth="503.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="204.0" />
+                                    <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="298.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="101.0" minHeight="3.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="98.0" minHeight="0.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label layoutX="44.0" layoutY="169.0" text="Name" GridPane.rowIndex="2" />
+                                    <Label layoutX="44.0" layoutY="83.0" text="Enrollment Number" />
+                                    <TextField fx:id="email" layoutX="194.0" layoutY="127.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="name" layoutX="204.0" layoutY="175.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label layoutX="44.0" layoutY="132.0" text="Email" GridPane.rowIndex="1" />
+                                    <TextField fx:id="enrol_num" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
+                                    <Label text="Category" GridPane.rowIndex="3" />
+                                    <ChoiceBox fx:id="category" prefHeight="31.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                 </children>
+                              </GridPane>
+                              <DatePicker fx:id="dob" disable="true" layoutX="253.0" layoutY="390.0" />
+                              <RadioButton layoutX="346.0" layoutY="308.0" mnemonicParsing="false" text="No">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="PhyDsbl" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="dobbfr" layoutX="253.0" layoutY="353.0" mnemonicParsing="false" onAction="#dob" text="Before" />
+                              <RadioButton fx:id="dobaftr" layoutX="424.0" layoutY="353.0" mnemonicParsing="false" onAction="#dob" text="After" />
+                              <RadioButton alignment="CENTER_LEFT" layoutX="253.0" layoutY="307.0" mnemonicParsing="false" text="Yes" toggleGroup="$PhyDsbl" />
+                              <RadioButton fx:id="dobon" layoutX="346.0" layoutY="353.0" mnemonicParsing="false" onAction="#dob" text="On" />
+                              <RadioButton layoutX="253.0" layoutY="261.0" mnemonicParsing="false" text="Male">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Gender" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton layoutX="346.0" layoutY="261.0" mnemonicParsing="false" text="Female" toggleGroup="$Gender" />
+                              <Label layoutX="47.0" layoutY="308.0" text="Physically Disabled" />
+                              <Label layoutX="47.0" layoutY="353.0" text="Date of Birth" />
+                              <Label layoutX="47.0" layoutY="261.0" text="Gender" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="Tb_Bgt" text="Educaional Information">
+                     <content>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="31.0" layoutY="25.0">
+                                 <children>
+                                    <GridPane layoutY="437.0" prefHeight="209.0" prefWidth="677.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.0" minWidth="10.0" prefWidth="284.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="121.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.0" minWidth="10.0" prefWidth="79.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="111.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="76.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <CheckBox fx:id="gradlsr" layoutX="511.0" layoutY="567.0" mnemonicParsing="false" onAction="#gradper" text="Lesser Than" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                          <CheckBox fx:id="Xgrt" layoutX="303.0" layoutY="486.0" mnemonicParsing="false" onAction="#xper" text="Greater Than" GridPane.columnIndex="1" />
+                                          <TextField fx:id="gradper" disable="true" layoutX="631.0" layoutY="562.0" onAction="#per" prefHeight="31.0" prefWidth="68.0" promptText="Percent" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                          <CheckBox fx:id="gradgrt" layoutX="303.0" layoutY="567.0" mnemonicParsing="false" onAction="#gradper" text="Greater Than" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <TextField fx:id="XIIper" disable="true" layoutX="631.0" layoutY="522.0" onAction="#per" prefHeight="31.0" prefWidth="68.0" promptText="Percent" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                          <TextField fx:id="gatescr" disable="true" layoutX="631.0" layoutY="641.0" onAction="#per" prefHeight="33.0" prefWidth="169.0" promptText="Score" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                          <CheckBox fx:id="pgradeq" layoutX="414.0" layoutY="608.0" mnemonicParsing="false" onAction="#pgradper" text="Equals" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                          <CheckBox fx:id="gateeq" layoutX="405.0" layoutY="656.0" mnemonicParsing="false" onAction="#gatescr" text="Equals" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                          <CheckBox fx:id="gradeq" layoutX="405.0" layoutY="567.0" mnemonicParsing="false" onAction="#gradper" text="Equals" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                          <Label layoutX="72.0" layoutY="486.0" text="Class X Board Percentage" />
+                                          <TextField fx:id="Xper" disable="true" layoutX="631.0" layoutY="481.0" onAction="#per" prefHeight="31.0" prefWidth="68.0" promptText="Percent" GridPane.columnIndex="4" />
+                                          <TextField fx:id="pgradper" disable="true" layoutX="631.0" layoutY="603.0" onAction="#per" prefHeight="31.0" prefWidth="68.0" promptText="Percent" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                          <Label layoutX="50.0" layoutY="527.0" text="Class XII Board Percentage" GridPane.rowIndex="1" />
+                                          <CheckBox fx:id="XIIgrt" layoutX="303.0" layoutY="527.0" mnemonicParsing="false" onAction="#xiiper" text="Greater Than" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <CheckBox fx:id="XIIeq" layoutX="405.0" layoutY="527.0" mnemonicParsing="false" onAction="#xiiper" text="Equals" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                          <Label layoutX="59.0" layoutY="656.0" text="GATE Score" GridPane.rowIndex="4" />
+                                          <CheckBox fx:id="Xlsr" layoutX="511.0" layoutY="486.0" mnemonicParsing="false" onAction="#xper" text="Lesser Than" GridPane.columnIndex="3" />
+                                          <CheckBox fx:id="Xeq" layoutX="405.0" layoutY="486.0" mnemonicParsing="false" onAction="#xper" text="Equals" GridPane.columnIndex="2" />
+                                          <CheckBox fx:id="gatelsr" layoutX="521.0" layoutY="656.0" mnemonicParsing="false" onAction="#gatescr" text="Lesser Than" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                          <CheckBox fx:id="pgradlsr" layoutX="521.0" layoutY="608.0" mnemonicParsing="false" onAction="#pgradper" text="Lesser Than" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                          <CheckBox fx:id="XIIlsr" layoutX="521.0" layoutY="527.0" mnemonicParsing="false" onAction="#xiiper" text="Lesser Than" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                          <Label layoutX="59.0" layoutY="608.0" text="Post Graduation Marks Percentage" GridPane.rowIndex="3" />
+                                          <Label layoutX="59.0" layoutY="567.0" text="Graduation Marks Percentage" GridPane.rowIndex="2" />
+                                          <CheckBox fx:id="gategrt" layoutX="303.0" layoutY="656.0" mnemonicParsing="false" onAction="#gatescr" text="Greater Than" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <CheckBox fx:id="pgradgrt" layoutX="303.0" layoutY="608.0" mnemonicParsing="false" onAction="#pgradper" text="Greater Than" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane prefHeight="437.0" prefWidth="564.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label layoutX="53.0" layoutY="58.0" text="PhD Stream" />
+                                          <Label layoutX="143.0" layoutY="148.0" text="Class XII Board" GridPane.rowIndex="4" />
+                                          <Label layoutX="113.0" layoutY="118.0" text="Post Graduation Degree" GridPane.rowIndex="2" />
+                                          <Label layoutX="63.0" layoutY="68.0" text="Class X Board" GridPane.rowIndex="3" />
+                                          <Label layoutX="434.0" layoutY="252.0" text="University(Graduation)" GridPane.rowIndex="9" />
+                                          <Label layoutX="123.0" layoutY="128.0" text="Graduation Degree" GridPane.rowIndex="1" />
+                                          <Label layoutX="133.0" layoutY="138.0" text="Department(Post Graduation)" GridPane.rowIndex="6" />
+                                          <Label layoutX="424.0" layoutY="242.0" text="University(Post Graduation)" GridPane.rowIndex="10" />
+                                          <Label layoutX="83.0" layoutY="88.0" text="State(Graduation From)" GridPane.rowIndex="7" />
+                                          <Label layoutX="103.0" layoutY="108.0" text="Department(Graduation)" GridPane.rowIndex="5" />
+                                          <Label layoutX="73.0" layoutY="78.0" text="State(Post Graduation From)" GridPane.rowIndex="8" />
+                                          <TextField fx:id="graduniv" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                          <ChoiceBox fx:id="pgradstate" prefHeight="31.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                          <ChoiceBox fx:id="gradstate" layoutX="294.0" layoutY="335.0" prefHeight="31.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                          <ChoiceBox fx:id="pgraddept" layoutX="294.0" layoutY="295.0" prefHeight="31.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                          <ChoiceBox fx:id="graddept" layoutX="294.0" layoutY="255.0" prefHeight="31.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                          <ChoiceBox fx:id="XIIboard" layoutX="294.0" layoutY="210.0" prefHeight="31.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                          <ChoiceBox fx:id="Xboard" layoutX="294.0" layoutY="169.0" prefHeight="31.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                          <ChoiceBox fx:id="pgraddeg" layoutX="294.0" layoutY="135.0" prefHeight="31.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <ChoiceBox fx:id="graddeg" layoutX="294.0" layoutY="87.0" prefHeight="31.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <ChoiceBox fx:id="stream" layoutX="294.0" layoutY="55.0" prefHeight="31.0" prefWidth="193.0" GridPane.columnIndex="1" />
+                                          <TextField fx:id="pgraduniv" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                              <Label fx:id="numonly" layoutX="574.0" layoutY="671.0" text="Enter Numbers Only" textFill="#ff0707" visible="false" />
+                           </children>
+                        </Pane>
+                     </content>
+                </Tab>
+                  <Tab fx:id="Tb_Expns1" text="Personal Information">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <DatePicker fx:id="datedupto" layoutX="253.0" layoutY="203.0" onAction="#dateselect2" />
+                              <DatePicker fx:id="datedfrom" layoutX="253.0" layoutY="106.0" onAction="#dateselect1" />
+                              <Label layoutX="56.0" layoutY="111.0" text="Applications Dated From" />
+                              <Label layoutX="57.0" layoutY="208.0" text="Applications Dated Upto" />
+                              <Button fx:id="result" layoutX="65.0" layoutY="302.0" mnemonicParsing="false" onAction="#OnSubmit" text="Show Filtered Result" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+    <AnchorPane layoutY="-2.0" minHeight="0.0" minWidth="0.0" prefHeight="135.0" prefWidth="764.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
+         <children>
+            <Label alignment="CENTER" layoutX="243.0" layoutY="40.0" minHeight="56.0" minWidth="257.0" text="Filter Enteries" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="243.0" AnchorPane.rightAnchor="264.0" AnchorPane.topAnchor="40.0">
+               <font>
+                  <Font size="37.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

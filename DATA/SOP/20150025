@@ -1,0 +1,36 @@
+var s = 0;
+var m = 0;
+var count = 0;
+
+var min = document.getElementById("min");
+var sec = document.getElementById("sec");
+
+var stop = setInterval( print, 1000);
+
+function print()
+{
+
+  console.log("Plus");
+  s++;
+  if(s==60){
+    s = 0;
+    m++;
+  }
+  
+  var ms ='';
+  if(m<10)ms='0';
+  var ss='';
+  if(s<10)ss='0';
+  
+  var minS = ms + m;
+  var secS = ss + s;
+
+  min.innerHTML = minS;
+  sec.innerHTML = secS;
+
+  count++;
+  if(count>100)clearInterval(stop);
+}
+
+
+

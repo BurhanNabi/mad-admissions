@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+	// Generate prime numbers 
+	int primes[1000002];
+
+	for (int i = 0; i < 1000002; ++i)
+	{
+		primes[i] = 1;
+	}
+	primes[0] = primes[1] = 0;
+
+	for (int i = 2; i < 1000001; ++i)
+	{
+		if( primes[i]==1)
+		{
+			for (int j = i*2; j < 1000001; j+=i )
+			{
+				primes[j] = 0;
+			}
+		}
+	}
+
+	// Find number of distinct prime divisors
+	int numPrimes[1000002], j, temp;
+
+	for (int i = 2; i < 1000002; ++i)
+	{
+		temp = i;
+		
+		for (int j = 2; j <= i; ++j)
+		{
+			if(!primes[j])
+				continue;
+			if( !temp%j )
+			{
+				numPrimes[i]++;
+			}
+		}	
+	}
+
+	cout<<"AHOY CAPTAIN"<<endl;
+
+	// Question starts
+	int t;
+	int a, b, k;
+	cin>>t;
+
+	while(t--) {
+		cin>>a>>b>>k;
+	}
+
+
+}

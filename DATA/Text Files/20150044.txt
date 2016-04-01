@@ -1,0 +1,26 @@
+Submitted On: null
+Enrollment ID: 20150044
+Name: Avadh Yadav
+Email: avadh@lolu.com
+Correspondance Address: sjahfjsahfjh	
+Permanent Address: sdmnfbmnsbdfn
+DOB: 2000-09-13
+Father's Name: Inspector Vinod
+Gender: Male
+Is Disabled: No
+Is a Child/Widow or army personnel: No
+Xth Board: CBSE
+Xth Percentage: 90.0
+Xth Year Of Passing: 2006
+XIIth Board: ICSE
+XIIth Percentage: 98.0
+XIIth Year Of Passing: 2008
+Graduation Degree B.SC
+Graduation Department Biology
+Graduation CollegeKangla College
+Graduation UniversityChawanni Univ
+Graduation City Aana
+Graduation State Uttar Pradesh
+Graduation Year Of Grad. 2012
+Graduation CGPA system false
+Graduation Marks 60.0
